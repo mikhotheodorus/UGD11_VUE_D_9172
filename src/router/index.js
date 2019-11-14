@@ -13,9 +13,14 @@ const routes = [
         component: DashboardLayout,
         children: [
             {
-                name: 'UserController',
-                path: '',
+                name: 'userController',
+                path: '/user',
                 component: loadView('userController')
+            },
+            {
+                name: 'layananKendaraan',
+                path: '/kendaraan',
+                component: loadView('layananKendaraan')
             }
         ]
     },

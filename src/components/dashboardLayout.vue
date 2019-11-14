@@ -24,15 +24,17 @@
                 <v-list-item
                 v-for="item in items"
                 :key="item.title"
-                link
+                link :to="item.link"
                 >
                 <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
                 </v-list-item-icon>
                 
                 <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    <v-list-item-title >{{ item.title }}</v-list-item-title>
+                    
                 </v-list-item-content>
+
                 </v-list-item>
             </v-list>
             <template v-slot:append>
@@ -75,8 +77,10 @@ export default {
         return {
             drawer: null,
             items: [
-                { title: 'User Controller', icon: 'mdi-human-male' },
+                { title: 'User Controller', icon: 'mdi-human-male' ,link: '/user'},
+                { title: 'Layanan Kendaraan', icon: 'mdi-tools',link: '/kendaraan'},
             ],
+                        
         }
     },
 }
